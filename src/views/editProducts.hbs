@@ -1,0 +1,45 @@
+<h1 class="texto botonera m-3">Editar productos</h1>
+<form action="/editProducts" method="post" enctype="multipart/form-data">
+<input class="btn-dark m-2" placeholder="Ingresar Nombre" name="nombre">
+<input class="btn-dark m-2" placeholder="Ingresar Descripcion" name="descripcion">
+<input class="btn-dark m-2" placeholder="Ingresar Estado" name="estado">
+<input class="btn-dark m-2" placeholder="Ingresar Valor" type="number" name="valor">
+<input class="btn-dark m-2" type="file" name="url" accept="image/x-png,image/gif,image/jpeg">
+<button class="btn-dark m-2" type="submit">Crear Producto</button>
+
+</form>
+
+<div class="contenedor m-3 row justify-content-center">
+{{#each products}}
+        <div class="tarjet col-2 m-4 hardware" id="tarjeta0">
+          <img class="img-fluid" src="./img/products/{{url}}">
+          <div class="texto m-1">
+            <h5>{{nombre}}</h5>
+            <p>${{valor}}</p>
+            <p>{{descripcion}}</p>
+            <p>{{estado}}</p>
+                   
+        <form action="/editProducts?_method=PUT" method="post">
+        <input type="hidden"  name="_id" value= {{_id}}> 
+          <h6 class="texto m-1">Nombre</h6>
+          <input class="m-1 btn-dark" name="nombre" placeholder={{nombre}}>
+          <h6 class="texto m-1">Descripcion</h6>
+          <input class="m-1 btn-dark" name="descripcion" placeholder={{descripcion}}>
+          <h6 class="texto m-1">Estado</h6>
+          <input class="m-1 btn-dark" name="estado" placeholder= {{estado}}>
+          <h6 class="texto m-1">El Valor es $</h6>
+          <input class"m-1 btn-dark" name="valor" placeholder= {{valor}}>
+          <button class="m-1 btn-dark" type="submit">Actualizar</button>
+        </form>
+    <form action="/editProducts?_method=delete" method="post">
+  <input type="hidden" name="_id" value={{_id}}>
+  <button class="m-1 btn-dark" type="submit">Borrar Producto</button>  
+</form>
+
+        </div>
+</div>
+           
+
+
+{{/each}}
+</div>

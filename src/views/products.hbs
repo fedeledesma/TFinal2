@@ -1,0 +1,24 @@
+<h1 class="texto botonera m-3">Hola!!! Estos son los productos</h1>
+<div class="contenedor m-3 row justify-content-center">
+{{#each products}}
+ 
+        <div class="tarjet col-2 m-4 hardware">
+          <img class="img-fluid" src="./img/products/{{url}}">
+          <div class="texto">
+            <h5>{{nombre}}</h5>
+            <p>El precio es: ${{precio}} Tiene un stock de: {{stock}} </p>
+            <form action="/editProducts" method="post">
+              <input type="hidden" name="id" value={{id}}>
+              <input type="hidden" name="url" value={{url}}>
+              <input type="hidden" name="nombre" value={{nombre}}>
+              <input type="hidden" name="descripcion" value={{descripcion}}>
+              <input type="hidden" name="precio" value={{precio}}>
+              <input type="text" name="estado" value={{descripcion}}>>
+              </form>
+          </div>
+        </div>
+  {{/each}}
+</div>     
+           
+        
+       

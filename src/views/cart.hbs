@@ -1,0 +1,13 @@
+{{#each carts}}
+<h1 class="texto botonera m-3">Estas en el carrito!!!</h1>
+<div class="contenedor m-3 row justify-content-center">
+    <div class="tarjet col-2 m-4 hardware" id="tarjeta0">
+          <img class="img-fluid" src="./img/products/{{url}}">
+          <div class="texto">
+            <h5>{{nombre}}</h5>
+            <p>{{precio}}</p>
+            <a href="#"><button class="btn btn-dark">Comprar</button></a>
+          </div>
+      </div>
+</div>      
+{{/each}}
