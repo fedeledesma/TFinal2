@@ -6,14 +6,18 @@
           <img class="img-fluid" src="./img/products/{{url}}">
           <div class="texto">
             <h5>{{nombre}}</h5>
-            <p>El precio es: ${{precio}} Tiene un stock de: {{stock}} </p>
-            <form action="/editProducts" method="post">
-              <input type="hidden" name="id" value={{id}}>
-              <input type="hidden" name="url" value={{url}}>
-              <input type="hidden" name="nombre" value={{nombre}}>
-              <input type="hidden" name="descripcion" value={{descripcion}}>
-              <input type="hidden" name="precio" value={{precio}}>
-              <input type="text" name="estado" value={{descripcion}}>>
+            <p>El precio es: ${{valor}} </p>
+            <form action="/editProducts?_method=PUT" method="post">
+              <input type="hidden" name="_id" value={{_id}}>
+             <h6 class="texto m-1">Estado: {{estado}}</h6>
+          <select class="form-select" name="estado" aria-label="Default select example">
+              <option selected>Estado del producto</option>
+              <option value="Malo">Malo</option>
+              <option value="Regular">Regular</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Optimo">Optimo</option>
+            </select>
+            <button type="submit">Actualizar</button>
               </form>
           </div>
         </div>

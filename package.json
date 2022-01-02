@@ -1,5 +1,5 @@
 {
-  "name": "trabajo-practico.git",
+  "name": "tfinal.git",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fedeledesma/trabajo-practico.git"
+    "url": "git+https://github.com/fedeledesma/tfinal.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fedeledesma/trabajo-practico.git"
+    "url": "https://github.com/fedeledesma/tfinal.git"
   },
-  "homepage": "https://github.com/fedeledesma/trabajo-practico.git",
+  "homepage": "https://github.com/fedeledesma/tfinal.git",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.5.0",
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "express-fileupload": "^1.2.1",
     "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",

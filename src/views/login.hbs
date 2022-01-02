@@ -1,22 +1,27 @@
 <div class="contenedor m-3 row justify-content-center">
 <main class="form-signin">
   <form action="login" method="post">
-    <h1 class="h3 mb-3 fw-normal texto">Por favor, logueate</h1>
-    <div class="form-floating">
+    <h1 class="texto m-5">Por favor, logueate</h1>
+    <div class="form-floating texto">
       <input type="email" class="form-control texto my-3" id="floatingInput" placeholder="nombre@ejemplo.com">
       <label for="floatingInput">Email</label>
     </div>
-    <div class="form-floating">
+    <div class="form-floating texto">
       <input type="password" class="form-control texto my-3" id="floatingPassword" placeholder="password">
       <label for="floatingPassword">Password</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control texto my-3" id="floatingPassword" placeholder="cargo">
-      <label for="floatingPassword">Cargo</label>
+        <select class="form-select texto" name="cargo" aria-label="Default select example">
+              <option selected>Elija su cargo</option>
+              <option value="encargado">Encargado</option>
+              <option value="pañolero">Pañolero</option>
+            </select>
     </div>
 
-    <button class="w-100 btn-dark" type="submit">Ingresar</button>
-    <p class="mt-5 mb-3 text-muted">&copy;2021</p>
+    <div class="row justify-content-center m-5">
+    <button class="btn btn-dark" type="submit">Ingresar</button>
+    <p class="m-5 text-muted texto">&copy;2021</p>
+    </div>
   </form>
 </main>
 </div>

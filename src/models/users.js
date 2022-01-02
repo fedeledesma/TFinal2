@@ -8,8 +8,9 @@ const usersSchema = new mongoose.Schema({
   password: { type: String, require: true },
   name: { type: String, require: true },
   cargo: { type: String, require: true },
-  type: {type:String,require:true}
-
+  tel: { type: Number, require: true },
+  type: { type:String, require: true },
+  url: { type: String, require: true },
 })
 
 export default mongoose.model(usersCollection, usersSchema)

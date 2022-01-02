@@ -1,7 +1,5 @@
 import Product from "../models/products.js"
 
-
-
 export const verProductos = async (req,res) => {
   
   try {
@@ -19,7 +17,6 @@ export const vistaEditar = async (req,res)=>{
   catch (e) { console.log(e) }
 }
 
-
 export const crearProductos = async (req,res) => {
   let product = req.body
   product.url = Math.floor(Math.random()*1000000000000) + ".jpg"
@@ -35,10 +32,7 @@ export const crearProductos = async (req,res) => {
   res.status(200).redirect('/editProducts')
     
   } 
-  catch (e) { console.log(e) }
-
-
-  
+  catch (e) { console.log(e) }  
 }
 
 export const borrarProductos = async (req,res) => {
@@ -57,8 +51,9 @@ export const update = async (req,res) => {
   console.log(req.body)
   let product = {}
   if(req.body.nombre) product.nombre = req.body.nombre
-  if(req.body.valor) product.precio = req.body.precio
-  if(req.body.stock) product.stock = req.body.stock
+  if(req.body.valor) product.valor = req.body.valor
+  if(req.body.descripcion) product.descripcion = req.body.descripcion
+  if(req.body.estado) product.estado = req.body.estado
   console.log(product)
   try {
     const productfound = await Product.find({_id:req.body._id}).lean()
@@ -71,8 +66,13 @@ export const update = async (req,res) => {
       { $set: product},
       { new: true }
     )
-    res.status(200).redirect('/editProducts')
+    if(req.body.user.cargo=="encargado"){
+      res.status(200).redirect('/editProducts')
+    }
+    if(req.body.user.cargo=="pañolero"){
+      res.status(200).redirect('/products')
+    }
+    
   } 
   catch (e) { console.log(e) }
-
 }

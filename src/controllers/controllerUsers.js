@@ -6,7 +6,7 @@ export const viewLogin = (req,res) =>{
 }
 export const login = (req,res) =>{
     
-    res.status(200).redirect('/productos')
+    res.status(200).redirect('/products')
 }
 export const viewRegister = (req,res) =>{
     
@@ -15,7 +15,7 @@ export const viewRegister = (req,res) =>{
 
 export const register = (req,res) =>{
 
-        res.status(200).redirect('/productos')
+        res.status(200).redirect('/products')
    
 }
 

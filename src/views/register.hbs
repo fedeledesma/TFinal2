@@ -1,38 +1,45 @@
 <div class="contenedor m-3 row justify-content-center">
 <main class="form-signin">
   <form action="register" method="post">
-    <h1 class="h3 mb-3 fw-normal texto">Por favor, logueate</h1>
-    <div class="form-floating">
-      <input type="email" class="form-control texto my-3" name="username" placeholder="nombre@ejemplo.com">
+    <h1 class="h3 mb-3 fw-normal texto">Por favor, registrate</h1>
+    <div class="form-floating texto">
+      <input type="email" class="form-control my-3" name="username" placeholder="nombre@ejemplo.com">
       <label for="floatingInput">Email</label>
     </div>
 
-    <div class="form-floating">
-      <input type="password" class="form-control texto my-3"  name="password" placeholder="Password">
+    <div class="form-floating texto">
+      <input type="password" class="form-control my-3"  name="password" placeholder="password">
       <label for="floatingPassword">Password</label>
     </div>
 
-    <div class="form-floating">
-      <input type="text" class="form-control texto my-3" name="name" placeholder="Nombre y apellido">
+    <div class="form-floating texto">
+      <input type="text" class="form-control my-3" name="name" placeholder="nombre y apellido">
       <label for="floatingPassword">Nombre y apellido</label>
     </div>
 
     <div class="form-floating">
-      <input type="text" class="form-control texto my-3" name="cargo" placeholder="Cargo">
-      <label for="floatingPassword">Cargo</label>
+        <select class="form-select texto" name="cargo" aria-label="Default select example">
+              <option selected>Elija su cargo</option>
+              <option value="encargado">Encargado</option>
+              <option value="pañolero">Pañolero</option>
+            </select>
     </div>
 
-    <div class="form-floating">
-      <input type="number" class="form-control texto my-3" name="tel" placeholder="Tel">
+    <div class="form-floating texto">
+      <input type="number" class="form-control my-3" name="tel" placeholder="tel">
       <label for="floatingPassword">Telefono</label>
     </div>
 
     <div class="form-floating">
-      <input class="btn-dark m-2" type="file" name="url" accept="image/x-png,image/gif,image/jpeg">
-      <label for="floatingPassword">Foto de perfil</label>
-    </div>  
-    <button class="w-100 btn-dark" type="submit">Registrarse</button>
-    <p class="mt-5 mb-3 text-muted">&copy;2021</p>
+      <h5 class="texto">Elija su foto de perfil</h5>
+      <input class="form-control texto" type="file" name="url" placeholder="url" accept="image/x-png,image/gif,image/jpeg">
+      <label for="floatingPassword"></label>
+    </div>
+
+    <div class="row justify-content-center m-5">
+    <button class="btn btn-dark" type="submit">Registrarse</button>
+    <p class="mt-5 mb-3 text-muted texto">&copy;2021</p>
+     </div> 
   </form>
 </main>
 </div>
